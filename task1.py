@@ -1,6 +1,6 @@
+import sys
 import numpy as np
-dataset = input()
-with open(dataset, 'r') as f:
+with open(sys.argv[1], 'r') as f:
     data = []
     for i in f:
         s = i.rstrip()
