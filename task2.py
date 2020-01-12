@@ -2,7 +2,7 @@ import sys
 import numpy as np
 data = []
 data_end = []
-with open("txt.txt") as f:
+with open(sys.argv[1], r) as f:
     for line in f:
         data.append([float(x) for x in line.split()])
 with open("txt2.txt") as f:
