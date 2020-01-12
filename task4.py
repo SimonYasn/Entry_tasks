@@ -1,4 +1,6 @@
-f  = open('txt.txt', 'r')
+import sys
+import numpy as np
+f = open(sys.argv[1], 'r')
 for i in f:
     s = i.rstrip().split()
     data1.append(s)
@@ -13,7 +15,7 @@ for i in data1:
     if time_start == time_end:
         data_1.append(time_start)
     for i in data_1:
-        data_res.append(i) #список , который включает в себя все диапазоны времени поминутно каждого посещения)
+        data_res.append(i) #список , который включает в себя все диапазоны времени поминутно(считая от полуночи) каждого посещения)
 max_count = []
 for i in data_res:
     max_count.append(data_res.count(i))
